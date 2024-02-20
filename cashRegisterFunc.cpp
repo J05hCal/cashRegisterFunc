@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-int main();
+int main()
 {
   int numItems;
   int itemScan;
@@ -29,6 +29,8 @@ int main();
   cout << endl << "HOW MANY ITEMS?: ";
   cin >> numItems;
 
-  while(i <= numItems);
-{
+  while(i <= numItems)
+  {
     cout << "PLEASE ENTER THE COST OF EACH ITEM
+  }
+}
