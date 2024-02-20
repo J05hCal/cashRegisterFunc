@@ -4,6 +4,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 // global variables needed 
 int numItems;
 int itemScan;
@@ -16,6 +17,21 @@ double total;
 double payment;
 double change;
 char response;
+=======
+int main()
+{
+  int numItems;
+  int itemScan;
+  int i;
+  double itemCost;
+  double subtotal;
+  double taxPercent;
+  double tax;
+  double total;
+  double payment;
+  double change;
+  char response;
+>>>>>>> cbe39b9f451f19f1a417c0397b185a0d558a3e5e
 
 /*--------------------------------------MAIN PROGRAM BODY----------------------------------------*/
 
@@ -36,6 +52,7 @@ int main()
   cout << endl << "HOW MANY ITEMS?: ";
   cin >> numItems;
 
+<<<<<<< HEAD
   
   while(i < numItems)
   {
@@ -50,3 +67,10 @@ int main()
   cout << numItems; 
     
   }
+=======
+  while(i <= numItems)
+  {
+    cout << "PLEASE ENTER THE COST OF EACH ITEM
+  }
+}
+>>>>>>> cbe39b9f451f19f1a417c0397b185a0d558a3e5e
