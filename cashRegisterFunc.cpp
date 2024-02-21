@@ -2,71 +2,68 @@
 #include <cmath>
 using namespace std;
 
-<<<<<<< HEAD
-// global variables needed 
-int numItems;
-int itemScan;
-int i;
-double itemCost;
-double subtotal;
-double taxPercent;
-double tax;
-double total;
-double payment;
-double change;
-char response;
-
 int main()
-{
-  int numItems;
-  int itemScan;
-  int i;
-  double itemCost;
-  double subtotal;
-  double taxPercent;
-  double tax;
-  double total;
-  double payment;
-  double change;
-  char response;
->>>>>>> cbe39b9f451f19f1a417c0397b185a0d558a3e5e
-
-/*--------------------------------------MAIN PROGRAM BODY----------------------------------------*/
-
-int main()
-{
-  // Sets the precise decimal points
+{    
+  int i;    
+  i = 1;
+  double tax;   
+  
+  //Automatically evaluates the total with tax
+  double itemScan(int numItems, double costItem);
+  {
+    const double taxPercent = 0.0775; //7.75%
+    double subtotal;
+    subtotal = 0;
+    cout << "ENTER AMOUNT OF ITEMS: \n";
+    cin >> numItems;
+    while (i <= numItems)
+    {
+      cout << "ENTER THE COST OF EACH ITEM#" << i <<": $";
+      cin >> costItem;
+      i++;
+    }
+    cout << endl << "SCANNING..." << itemScan() << endl;
+    subtotal = costItem * numItems;
+    cout << endl << "SCANNING COMPLETE\n";
+    cout << endl << "SUBTOTAL: $" << subtotal << endl;
+  
+    tax = taxPercent * subtotal;
+    total = subtotal + tax;
+    cout << "FINAL TOTAL: $" << total << endl << endl;
+    
+    return(subtotal + subtotal * taxPercent);
+  }
   cout.setf(ios::showpoint);
   cout.setf(ios::fixed);
   cout.precision(2);
 
-  // Adds the tax percent for the total cost. 
-  taxPercent = 0.0775;
-
-  subtotal;
-
-  i = 0;
-
-  cout << endl << "HOW MANY ITEMS?: ";
-  cin >> numItems;
-
-<<<<<<< HEAD
-  do
+  //different kinds of payments in one function
+  double payment(char response, double change);
   {
-    cout << "ITEM SCANNING..." << endl << endl; //Scans items
-    itemScan;
-    cout << endl << endl << "ITEMSCAN COMPLETE." << endl;
-    return 0;
-  }
-  while(i < numItems)
-  {
-    cout << "PLEASE ENTER THE COST OF EACH ITEM: ";
-    cin >> itemCost;
-    i++;
-  };
-  cout << numItems
-  }
-=======
+    cout << "CASH OR CREDIT? ENTER 'C' FOR CASH OR 'T' FOR CREDIT: ";
+    cin >> response;
 
->>>>>>> cbe39b9f451f19f1a417c0397b185a0d558a3e5e
-}  
+    if (response == 'C' || response == 'c')
+    {
+        cout << endl << "CASH: $";
+        cin >> payment;
+
+        if (payment < total)
+        {
+            cout << endl << "WRONG AMOUNT, ENTER THE RIGHT AMOUNT OF CASH: $";
+            cin >> payment;
+        }
+        change = payment - total;
+        cout << "CHANGE: $" << change << endl;
+    }
+    else if (response == 'T' || response == 't')
+    {
+        cout << "CARD PAYMENT: $" << total << endl;
+    }
+    else
+    {
+        cout << "ERROR. INCORRECT SELECTION." << endl;
+    }
+  }
+  return 0;
+}
