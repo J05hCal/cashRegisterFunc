@@ -1,7 +1,5 @@
 #include <iostream>
-
 #include <cmath>
-
 using namespace std;
 
 <<<<<<< HEAD
@@ -17,7 +15,7 @@ double total;
 double payment;
 double change;
 char response;
-=======
+
 int main()
 {
   int numItems;
@@ -53,24 +51,22 @@ int main()
   cin >> numItems;
 
 <<<<<<< HEAD
-  
+  do
+  {
+    cout << "ITEM SCANNING..." << endl << endl; //Scans items
+    itemScan;
+    cout << endl << endl << "ITEMSCAN COMPLETE." << endl;
+    return 0;
+  }
   while(i < numItems)
   {
-
     cout << "PLEASE ENTER THE COST OF EACH ITEM: ";
-
     cin >> itemCost;
-
     i++;
   };
-
-  cout << numItems; 
-    
+  cout << numItems
   }
 =======
-  while(i <= numItems)
-  {
-    cout << "PLEASE ENTER THE COST OF EACH ITEM
-  }
-}
+
 >>>>>>> cbe39b9f451f19f1a417c0397b185a0d558a3e5e
+}  
